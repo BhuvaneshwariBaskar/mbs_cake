@@ -1,36 +1,36 @@
-<div class="bg-[#F5F5F5] flex relative justify-center items-center fixed">
-    <div class="flex relative justify-between items-center  h-[100px] w-[80%] md:w-full md:px-20 md:py-4">
-
-        <div class="flex relative justify-start items-center">
-            <img class="w-28 h-18" src="../../../assets/images/logobg.png" alt="">
-            <!-- <h1 class="pl-5 text-2xl font-bold text-[#F2536D]">
-                MB's CAKES
-            </h1> -->
+<nav class="bg-white p-4 px-20">
+    <div class="container mx-auto flex justify-between items-center">
+        <div>
+            <a routerLink="/" class="text-black font-bold text-xl">
+                <img src="../../../assets/images/logobg.png" class="w-20 h-16" alt="">
+            </a>
         </div>
-        <ul id="Menu"
-            class="grow flex md:flex-row justify-end items-center absolute md:relative flex-col top-[-120%] md:top-[inherit] pl-10 md:pl-0">
-            <li class="text-base font-extralight hover:underline hover:text-[#F2536D]"><a routerLink="">Home</a></li>
-            <li class="text-base font-extralight hover:underline hover:text-[#F2536D]"><a class="pl-10"
-                    routerLink="">About</a></li>
-            <li class="text-base font-extralight hover:underline hover:text-[#F2536D]"><a class="pl-10"
-                    routerLink="">Cake
-                    Flavor</a></li>
-            <li class="text-base font-extralight hover:underline hover:text-[#F2536D]"><a class="pl-10"
-                    routerLink="">Events</a></li>
-            <li class="text-base font-extralight hover:underline hover:text-[#F2536D]"><a class="pl-10"
-                    routerLink="">Contact</a></li>
-        </ul>
-        <div class="text-2xl justify-end cursor-pointer md:hidden ">
-            <img id="menuToggle" width="40" height="40" src="https://img.icons8.com/ios-filled/50/menu--v1.png"
-                alt="menu--v1" />
+        <div class="hidden md:block">
+            <ul class="flex space-x-4">
+                <li><a routerLink="/" class="text-black">Home</a></li>
+                <li><a routerLink="/about" class="text-black">About</a></li>
+                <li><a routerLink="/services" class="text-black">Services</a></li>
+                <li><a routerLink="/contact" class="text-black">Contact</a></li>
+            </ul>
         </div>
-
-
+        <div class="block md:hidden">
+            <!-- Mobile menu toggle button -->
+            <button (click)="toggleMenu()" class="text-black focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                  </svg>
+                  
+                  
+            </button>
+        </div>
     </div>
-</div>
-<script>
-    document.querySelector('menuToggle').addEventListener('click',()=>{
-        let menu=document.getElementById("menu");
-        menu.classList.toggle('top-[120%]')
-    })
-</script>
+    <!-- Mobile menu -->
+    <div [class.hidden]="!isMenuOpen" class="md:hidden bg-[#F5F5F5] flex absolute w-full justify-center items-center p-8 ">
+        <ul class="flex flex-col space-y-2">
+            <li><a routerLink="/" class="text-black">Home</a></li>
+            <li><a routerLink="/about" class="text-black pb-5">About</a></li>
+            <li><a routerLink="/services" class="text-black pb-5">Services</a></li>
+            <li><a routerLink="/contact" class="text-black">Contact</a></li>
+        </ul>
+    </div>
+</nav>
