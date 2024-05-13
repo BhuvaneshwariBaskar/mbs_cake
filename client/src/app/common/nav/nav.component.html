@@ -1,4 +1,4 @@
-<nav class="bg-white p-4 px-20">
+<nav class="bg-white p-4 md:px-20 px-10">
     <div class="container mx-auto flex justify-between items-center">
         <div>
             <a routerLink="/" class="text-black font-bold text-xl">
@@ -6,7 +6,7 @@
             </a>
         </div>
         <div class="hidden md:block">
-            <ul class="flex space-x-4">
+            <ul class="flex space-x-12 text-lg">
                 <li><a routerLink="/" class="text-black">Home</a></li>
                 <li><a routerLink="/about" class="text-black">About</a></li>
                 <li><a routerLink="/services" class="text-black">Services</a></li>
@@ -16,21 +16,27 @@
         <div class="block md:hidden">
             <!-- Mobile menu toggle button -->
             <button (click)="toggleMenu()" class="text-black focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                  </svg>
-                  
-                  
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+
+
             </button>
         </div>
     </div>
     <!-- Mobile menu -->
-    <div [class.hidden]="!isMenuOpen" class="md:hidden bg-[#F5F5F5] flex absolute w-full justify-center items-center p-8 ">
+    <div [class.hidden]="!isMenuOpen"
+        class="md:hidden bg-[#F5F5F5] flex absolute w-[80%] justify-center items-center p-8 ">
         <ul class="flex flex-col space-y-2">
-            <li><a routerLink="/" class="text-black">Home</a></li>
-            <li><a routerLink="/about" class="text-black pb-5">About</a></li>
-            <li><a routerLink="/services" class="text-black pb-5">Services</a></li>
-            <li><a routerLink="/contact" class="text-black">Contact</a></li>
+            <li class="border-b-2 border-slate-950 border"><a routerLink="/" class="text-black text-xl">Home</a></li>
+            <li class="border-b-2 border-slate-950 border"><a routerLink="/about"
+                    class="text-black pb-5 text-xl">About</a></li>
+            <li class="border-b-2 border-slate-950 border"><a routerLink="/services"
+                    class="text-black pb-5 text-xl">Services</a></li>
+            <li class="border-b-2 border-slate-950 border"><a routerLink="/contact"
+                    class="text-black text-xl">Contact</a></li>
         </ul>
     </div>
 </nav>
