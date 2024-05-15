@@ -1,16 +1,17 @@
-<div class="flex justify-center items-center flex-col">
-    <div class="w-full bg-[#F4F4F4] rounded-3xl flex md:justify-between md:items-center p-7 md:flex-row flex-col">
-        <h1 class="text-2xl font-bold">Cakes Flavour</h1>
-    
-        <div class="flex ">
-            <p class="text-gray-700 text-base pr-2 text-[#F2536D]">see all cakes</p>
-    
-            <a href=""><img width="27" height="32" src="https://img.icons8.com/laces/64/arrow.png" alt="arrow" /></a>
-        </div>
+<div class="w-full bg-[#F4F4F4] rounded-3xl flex md:justify-between md:items-center p-7 md:flex-row flex-col">
+    <h1 class="text-2xl font-bold">Cakes Flavour</h1>
+
+    <div class="flex ">
+        <p class="text-gray-700 text-base pr-2 text-[#F2536D]">see all cakes</p>
+
+        <a href=""><img width="27" height="32" src="https://img.icons8.com/laces/64/arrow.png" alt="arrow" /></a>
     </div>
-    <br><br>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-        <app-cakecards></app-cakecards>
-    
-    </div>
+</div>
+<br><br>
+
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 px-10 lg:px-14 xl:px-16 gap-6 mb-5">
+    <app-cakecards *ngFor="let cake in cakesData" [cake]="cake">
+        {{ cake | json }}
+    </app-cakecards>
+
 </div>

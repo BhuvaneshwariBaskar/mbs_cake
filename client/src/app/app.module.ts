@@ -10,6 +10,7 @@ import { AboutComponent } from './component/home/about/about.component';
 import { CakecardsComponent } from './component/home/cakecards/cakecards.component';
 import { CakecardshowComponent } from './component/home/cakecardshow/cakecardshow.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { CakecardshowComponent } from './component/home/cakecardshow/cakecardsho
     HeroComponent,
     AboutComponent,
     CakecardsComponent,
-    CakecardshowComponent
+    CakecardshowComponent,
+  
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Cakes } from 'src/app/interface/cakes';
 
 @Component({
   selector: 'app-cakecards',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./cakecards.component.css']
 })
 export class CakecardsComponent {
-    rating:Number=4
+    @Input() cake!:Cakes;
 }
