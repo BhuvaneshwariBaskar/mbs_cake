@@ -9,9 +9,9 @@
 </div>
 <br><br>
 
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 px-10 lg:px-14 xl:px-16 gap-6 mb-5">
-    <app-cakecards *ngFor="let cake in cakesData" [cake]="cake">
-        {{ cake | json }}
-    </app-cakecards>
 
+
+<div class="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 px-10 lg:px-14 xl:px-16 gap-6 mb-5">
+    <app-cakecards *ngFor="let cake of cakesData" [cake]="cake">
+    </app-cakecards>
 </div>

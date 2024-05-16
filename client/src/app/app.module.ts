@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,7 +10,8 @@ import { HeroComponent } from './component/home/hero/hero.component';
 import { AboutComponent } from './component/home/about/about.component';
 import { CakecardsComponent } from './component/home/cakecards/cakecards.component';
 import { CakecardshowComponent } from './component/home/cakecardshow/cakecardshow.component';
-
+import { MapComponent } from './component/home/map/map.component';
+import { FooterComponent } from './common/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +22,11 @@ import { CakecardshowComponent } from './component/home/cakecardshow/cakecardsho
     AboutComponent,
     CakecardsComponent,
     CakecardshowComponent,
-  
+    MapComponent,
+    FooterComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
