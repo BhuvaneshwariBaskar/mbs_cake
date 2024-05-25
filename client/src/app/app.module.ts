@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { CakecardsComponent } from './component/home/cakecards/cakecards.compone
 import { CakecardshowComponent } from './component/home/cakecardshow/cakecardshow.component';
 import { MapComponent } from './component/home/map/map.component';
 import { FooterComponent } from './common/footer/footer.component';
+import { CakeindividualComponent } from './pages/cakeindividual/cakeindividual.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,9 @@ import { FooterComponent } from './common/footer/footer.component';
     CakecardshowComponent,
     MapComponent,
     FooterComponent,
+    CakeindividualComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule,HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
