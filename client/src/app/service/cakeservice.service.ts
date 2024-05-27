@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Cakes } from '../interface/cakes';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -11,5 +11,13 @@ export class CakeserviceService {
   constructor(private http: HttpClient) {}
   getCakes(): Observable<Cakes[]> {
     return this.http.get<Cakes[]>(`${this.baseUrl}/getCakes`);
+  }
+
+
+  private cakeSource=new Subject<any>();
+  cakeSelected$=this.cakeSource.asObservable();
+
+  selectCake(cake:any){
+    this.cakeSource.next(cake);
   }
 }
