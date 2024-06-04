@@ -14,6 +14,10 @@ import { CakecardshowComponent } from './component/home/cakecardshow/cakecardsho
 import { MapComponent } from './component/home/map/map.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { CakeindividualComponent } from './pages/cakeindividual/cakeindividual.component';
+import { LoginComponent } from './pages/login/login.component';
+import { StatsComponent } from './component/home/stats/stats.component';
+import { TrustpointsComponent } from './component/home/trustpoints/trustpoints.component';
+
 
 @NgModule({
   declarations: [
@@ -27,6 +31,10 @@ import { CakeindividualComponent } from './pages/cakeindividual/cakeindividual.c
     MapComponent,
     FooterComponent,
     CakeindividualComponent,
+    LoginComponent,
+    StatsComponent,
+    TrustpointsComponent,
+
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule,HttpClientModule],
   providers: [],

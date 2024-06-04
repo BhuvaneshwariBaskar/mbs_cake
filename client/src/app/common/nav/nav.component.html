@@ -11,19 +11,30 @@
                 <li><a routerLink="/about" class="text-black">About</a></li>
                 <li><a routerLink="/services" class="text-black">Services</a></li>
                 <li><a routerLink="/contact" class="text-black">Contact</a></li>
+                <li><a routerLink="/contact"><img width="30" height="30"
+                            src="https://img.icons8.com/ios-filled/50/000000/user-male-circle.png"
+                            alt="user-male-circle" /></a></li>
+
             </ul>
         </div>
         <div class="block md:hidden">
             <!-- Mobile menu toggle button -->
-            <button (click)="toggleMenu()" class="text-black focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
+            <div class="flex justify-center items-center">
+                <a href=""> <img width="38" height="38" class="pr-2"
+                        src="https://img.icons8.com/ios-filled/50/000000/user-male-circle.png"
+                        alt="user-male-circle" /></a>
+                <button (click)="toggleMenu()" class="text-black focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16">
+                        </path>
+                    </svg>
 
 
-            </button>
+                </button>
+
+            </div>
         </div>
     </div>
     <!-- Mobile menu -->
@@ -31,12 +42,9 @@
         class="md:hidden bg-[#F5F5F5] flex absolute w-[80%] justify-center items-center p-8 ">
         <ul class="flex flex-col space-y-2">
             <li class="  "><a routerLink="/" class="text-black text-xl">Home</a></li>
-            <li class= ""><a routerLink="/about"
-                    class="text-black pb-5 text-xl">About</a></li>
-            <li class="  "><a routerLink="/services"
-                    class="text-black pb-5 text-xl">Services</a></li>
-            <li class="  "><a routerLink="/contact"
-                    class="text-black text-xl">Contact</a></li>
+            <li class=""><a routerLink="/about" class="text-black pb-5 text-xl">About</a></li>
+            <li class="  "><a routerLink="/services" class="text-black pb-5 text-xl">Services</a></li>
+            <li class="  "><a routerLink="/contact" class="text-black text-xl">Contact</a></li>
         </ul>
     </div>
 </nav>

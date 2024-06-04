@@ -1,0 +1,40 @@
+<div class="w-full h-screen flex justify-center items-center bg-no-repeat bg-cover"
+    style="background-image: url('https://img.freepik.com/free-photo/frame-food-ingredients-baking-gently-pink-pastel-background-cooking-flat-lay-with-copy-space-top-view-baking-concept-flat-lay_127032-2200.jpg?w=996&t=st=1717492651~exp=1717493251~hmac=bf5715d7017884b116bd94e3efdb56fcd01acdb43a3cd58dceaf2265b5b7ef90');">
+    <div
+        class=" md:w-[50vw] md:h-[75vh] lg:w-[35vw] h-[75vh] w-[70vw] bg-white rounded-lg flex justify-center items-center flex-col p-5">
+        <h1 class="text-3xl font-semibold text-[#2c2c2c] pt-2">Sign Up</h1>
+        <br>
+        <form #loginForm="ngForm" (submit)="getLoginDetails(loginForm)"
+            class="flex justify-center items-center flex-col">
+            <div class="flex flex-col w-full">
+                <label for="email" class="pb-1 text-lg">Email :</label>
+                <input class="p-4 border-2 border-gray-300 placeholder:pl-2 h-10 rounded-md lg:w-[25vw]" type="email"
+                    name="email" id="email" placeholder="Enter Your Email" ngModel>
+            </div>
+            <br>
+            <div class="flex flex-col w-full">
+                <label for="phone" class="pb-1 text-lg">Phone Number :</label>
+                <input class="p-4 border-2 border-gray-300 placeholder:pl-2 h-10 rounded-md lg:w-[25vw]" type="tel"
+                    name="phone" id="phone" placeholder="Enter Your Phone Number" ngModel>
+            </div>
+            <br>
+            <div class="flex flex-col w-full">
+                <label for="password" class="pb-1 text-lg">Password :</label>
+                <input class="p-4 border-2 border-gray-300 placeholder:pl-2 h-10 rounded-md lg:w-[25vw] " type="password"
+                    name="password" id="password" placeholder="Enter Your Password" ngModel>
+            </div>
+            <br>
+            <button class="px-4 py-1 bg-[#2a2a2a] text-white rounded-sm" type="submit">Continue</button>
+        </form>
+        <p class="text-base pt-3">Or</p>
+        <div id="g_id_onload" data-client_id="720231613464-7eljvamcid36jarlbaqb17999rhsap8u.apps.googleusercontent.com"
+            data-context="signin" data-ux_mode="popup" data-login_uri="http://localhost:8080/v1/auth/login"
+            data-auto_prompt="false">
+        </div>
+
+        <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="filled_blue"
+            data-text="signin_with" data-size="large" data-logo_alignment="left">
+        </div>
+    </div>
+
+</div>

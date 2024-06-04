@@ -1,7 +1,7 @@
-<div  class="max-w-sm  bg-white border-2 border-gray-100 rounded-3xl shadow-xl " (click)="openModal(cake)">
-
+<div class="max-w-sm bg-white border-2 border-gray-100 rounded-3xl shadow-xl group">
     <div class="relative p-2">
-        <img [src]="cake.cake_image" class="rounded-xl " alt={{cake.cake_name}}>
+        <img [src]="cake.cake_image" class="rounded-xl group-hover:blur-sm transition-all duration-300 ease-in-out"
+            alt={{cake.cake_name}}>
         <div class="absolute top-5 flex px-2">
             <button class="py-1 px-3 bg-white text-black rounded-xl border text-[0.7rem]">{{cake.cake_genre}}</button>
         </div>
@@ -9,6 +9,11 @@
             <div class="bg-white p-1 rounded-full ml-2">
                 <img width="24" height="24" src="https://img.icons8.com/windows/32/F2536D/hearts.png" alt="hearts">
             </div>
+        </div>
+        <!-- Price container -->
+        <div (click)="openModal(cake)"
+            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+            <span class="text-white text-2xl">₹ {{cake.cake_price}}.00</span>
         </div>
     </div>
     <!-- <div class="p-5">
