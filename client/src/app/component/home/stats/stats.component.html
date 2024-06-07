@@ -5,26 +5,25 @@
         <div class="grid md:grid-cols-3 gap-14 grid-cols-1">
             <div class="flex flex-col justify-center items-center relative ">
                 <div class="flex text-[#957171] text-[4.5rem]">
-                    <p data-target="100">100</p>
+                    <p appAnimateValue [endValue]="100" [duration]="3000">0</p>
                     <div>+</div>
                 </div>
                 <div class="text-lg text-center">No. of Cakes Delivered</div>
             </div>
             <div class="flex flex-col justify-start items-center relative">
                 <div class="flex text-[#957171] text-[4.5rem]">
-                    <p data-target="40">40</p>
+                    <p appAnimateValue [endValue]="40" [duration]="3000">0</p>
                     <div>+</div>
                 </div>
                 <div class="text-lg text-center">No. of Customers</div>
             </div>
             <div class="flex flex-col justify-center items-center relative">
                 <div class="flex text-[#957171] text-[4.5rem]">
-                    <p data-target="30">30</p>
+                    <p appAnimateValue [endValue]="30" [duration]="3000">0</p>
                     <div>+</div>
                 </div>
                 <div class="text-lg text-center">No. of Unique Designs</div>
             </div>
         </div>
     </div>
-
 </div>

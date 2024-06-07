@@ -17,6 +17,8 @@ import { CakeindividualComponent } from './pages/cakeindividual/cakeindividual.c
 import { LoginComponent } from './pages/login/login.component';
 import { StatsComponent } from './component/home/stats/stats.component';
 import { TrustpointsComponent } from './component/home/trustpoints/trustpoints.component';
+import { OfferComponent } from './component/home/offer/offer.component';
+import { AnimateValueDirective } from './directive/animate-value.directive';
 
 
 @NgModule({
@@ -34,6 +36,8 @@ import { TrustpointsComponent } from './component/home/trustpoints/trustpoints.c
     LoginComponent,
     StatsComponent,
     TrustpointsComponent,
+    OfferComponent,
+    AnimateValueDirective,
 
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule,HttpClientModule],

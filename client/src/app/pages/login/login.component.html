@@ -4,8 +4,7 @@
         class=" md:w-[50vw] md:h-[75vh] lg:w-[35vw] h-[75vh] w-[70vw] bg-white rounded-lg flex justify-center items-center flex-col p-5">
         <h1 class="text-3xl font-semibold text-[#2c2c2c] pt-2">Sign Up</h1>
         <br>
-        <form #loginForm="ngForm" (submit)="getLoginDetails(loginForm)"
-            class="flex justify-center items-center flex-col">
+        <form #loginForm="ngForm" (submit)="login(loginForm)" class="flex justify-center items-center flex-col">
             <div class="flex flex-col w-full">
                 <label for="email" class="pb-1 text-lg">Email :</label>
                 <input class="p-4 border-2 border-gray-300 placeholder:pl-2 h-10 rounded-md lg:w-[25vw]" type="email"
@@ -20,8 +19,8 @@
             <br>
             <div class="flex flex-col w-full">
                 <label for="password" class="pb-1 text-lg">Password :</label>
-                <input class="p-4 border-2 border-gray-300 placeholder:pl-2 h-10 rounded-md lg:w-[25vw] " type="password"
-                    name="password" id="password" placeholder="Enter Your Password" ngModel>
+                <input class="p-4 border-2 border-gray-300 placeholder:pl-2 h-10 rounded-md lg:w-[25vw] "
+                    type="password" name="password" id="password" placeholder="Enter Your Password" ngModel>
             </div>
             <br>
             <button class="px-4 py-1 bg-[#2a2a2a] text-white rounded-sm" type="submit">Continue</button>
