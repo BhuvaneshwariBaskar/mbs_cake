@@ -4,32 +4,35 @@ import { LoginService } from 'src/app/service/login.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css'],
 })
-export class LoginComponent {
+export class RegisterComponent {
   constructor(private loginservice: LoginService, private router: Router) {}
 
-  login(loginForm: NgForm) {
-    console.log(loginForm);
+  register(Form: NgForm) {
+    console.log(Form);
 
-    if (loginForm.valid) {
-      this.loginservice.login(loginForm.value).subscribe(
+    if (Form.valid) {
+      this.loginservice.register(Form.value).subscribe(
         (res: any) => {
           console.log(res);
-          const token = res.token;
           const user = res.user;
+          const token = res.token;
+          // Creating object
           const authData = {
             token: token,
-            user: user,
+            user: user
           };
+          // Store the object in local storage
           localStorage.setItem('authData', JSON.stringify(authData));
-          alert('Login Successful');
+          
+          alert('Register Successfull');
           this.router.navigate(['/home']);
         },
         (error) => {
-          console.error('Error passing login details', error);
+          console.error('Error passing register details', error);
         }
       );
     } else {

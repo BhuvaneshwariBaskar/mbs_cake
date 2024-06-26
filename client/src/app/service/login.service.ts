@@ -10,9 +10,15 @@ export class LoginService {
   private baseUrl: String = 'http://localhost:8080/v1/auth';
   constructor(private http: HttpClient) {}
 
-  login(loginForm:any): Observable<User> {
+  login(loginForm: any): Observable<User> {
     console.log(loginForm);
-    
+
     return this.http.post<User>(`${this.baseUrl}/login`, loginForm);
+  }
+
+  register(registerForm: any): Observable<User> {
+    console.log(registerForm);
+
+    return this.http.post<User>(`${this.baseUrl}/register`, registerForm);
   }
 }

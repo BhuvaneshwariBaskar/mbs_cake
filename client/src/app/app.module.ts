@@ -19,6 +19,7 @@ import { StatsComponent } from './component/home/stats/stats.component';
 import { TrustpointsComponent } from './component/home/trustpoints/trustpoints.component';
 import { OfferComponent } from './component/home/offer/offer.component';
 import { AnimateValueDirective } from './directive/animate-value.directive';
+import { RegisterComponent } from './pages/register/register.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { AnimateValueDirective } from './directive/animate-value.directive';
     TrustpointsComponent,
     OfferComponent,
     AnimateValueDirective,
+    RegisterComponent,
 
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule,HttpClientModule],
